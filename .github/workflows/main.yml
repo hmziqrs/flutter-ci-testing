@@ -90,7 +90,7 @@ jobs:
           npm i
           npm run upload macos ${{ secrets.ACCOUNT }}
 
-        uses: ncipollo/release-action@v1
+      - uses: ncipollo/release-action@v1
         with:
           artifacts: 'app/build/macOS/Build/Products/Release/mac-release.zip'
           token: ${{ secrets.TOKEN }}
