@@ -1,0 +1,25 @@
+{
+  "name": "flutter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "debug-upload": "nodemon scripts/upload.js --exec  babel-node",
+    "upload": "babel-node scripts/upload"
+  },
+  "dependencies": {
+    "@babel/polyfill": "7.7.0",
+    "@babel/runtime": "7.7.5",
+    "backslash": "^0.2.0",
+    "firebase": "^7.9.1",
+    "firebase-admin": "^8.9.2",
+    "nodemon": "^2.0.2",
+    "slash": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.7.5",
+    "@babel/core": "7.5.5",
+    "@babel/node": "7.7.4",
+    "@babel/preset-env": "7.0.0"
+  },
+  "resolutions": {}
+}
