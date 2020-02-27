@@ -10,19 +10,19 @@ const platforms = {
     name: 'linux-release.zip',
   },
   macos: {
-    path: 'build/macos/Build/Products/Release/mac-release.zip',
-    name: 'mac-release.zip',
+    path: 'build/macos/Build/Products/Release/macos-release.zip',
+    name: 'macos-release.zip',
   },
   windows: {
     path: 'build\\windows\\x64\\Release\\windows-release.zip',
-    name: 'window-release.zip',
+    name: 'windows-release.zip',
   },
 };
 
 async function main() {
   const platform = process.argv[2];
 
-  const app = admin.initializeApp({
+  admin.initializeApp({
     credential: admin.credential.cert(
       JSON.parse(process.env.ACCOUNT || process.argv[3])
     ),

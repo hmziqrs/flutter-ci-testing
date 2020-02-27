@@ -83,7 +83,7 @@ jobs:
           flutter pub get
           flutter build macos --release
           cd build/macos/Build/Products/Release
-          ditto -c -k --sequesterRsrc --keepParent github_ci_tesing.app mac-release.zip
+          ditto -c -k --sequesterRsrc --keepParent github_ci_tesing.app macos-release.zip
 
       - run: |
           cd app
@@ -92,7 +92,7 @@ jobs:
 
       - uses: ncipollo/release-action@v1
         with:
-          artifacts: 'app/build/macOS/Build/Products/Release/mac-release.zip'
+          artifacts: 'app/build/macOS/Build/Products/Release/macos-release.zip'
           token: ${{ secrets.TOKEN }}
           allowUpdates: true
 
@@ -120,7 +120,7 @@ jobs:
           flutter pub get
           flutter build windows --release
           cd build\windows\x64\Release
-          Compress-Archive -Path Runner -DestinationPath window-release.zip
+          Compress-Archive -Path Runner -DestinationPath windows-release.zip
 
       # Windows prints the secret variable in log taht's why It's disabled for now
       # - run: |
@@ -131,6 +131,6 @@ jobs:
       - name: Windows release build for github
         uses: ncipollo/release-action@v1
         with:
-          artifacts: 'app\build\windows\x64\Release\window-release.zip'
+          artifacts: 'app\build\windows\x64\Release\windows-release.zip'
           token: ${{ secrets.TOKEN }}
           allowUpdates: true
