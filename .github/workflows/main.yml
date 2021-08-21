@@ -9,11 +9,11 @@ jobs:
     name: Android & Linux & Web
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          git clone https://github.com/flutter/flutter.git
-          cd flutter
-          git checkout 4df8fdb7df
-      - run: echo ::add-path::`pwd`"/flutter/bin"
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '2.2.2'
+      - name: Flutter doctor
+        run: flutter doctor
 
       - uses: actions/setup-java@v1
         with:
