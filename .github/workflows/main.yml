@@ -26,10 +26,13 @@ jobs:
       - uses: actions/checkout@v2
         with:
           path: 'app'
-      - run: flutter devices
+
+      - run: |
+          flutter config --enable-linux-desktop
+          flutter devices
+
       - run: |
           cd app
-          flutter config --enable-linux-desktop
           flutter config --enable-web
           flutter pub get
           flutter build linux --release
