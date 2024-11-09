@@ -1,0 +1,34 @@
+{
+	"version": "1.0.0",
+	"configurations": [
+		{
+			"name": "Flutter",
+			"request": "launch",
+			"type": "dart"
+		},
+		{
+			"name": "macOS (desktop)",
+			"deviceId": "macos",
+			"type": "dart",
+			"request": "launch",
+			"os": "darwin",
+			"args": []
+		},
+		{
+			"name": "Mac Designed for iPad (desktop)",
+			"deviceId": "mac-designed-for-ipad",
+			"type": "dart",
+			"request": "launch",
+			"os": "darwin",
+			"args": []
+		},
+		{
+			"name": "Chrome (web)",
+			"deviceId": "chrome",
+			"type": "dart",
+			"request": "launch",
+			"os": "web",
+			"args": []
+		}
+	]
+}
