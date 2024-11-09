@@ -1,18 +1,16 @@
-# Github Actions with release for flutter MacOS, Linux, Windows & Android.
+# github_ci_tesing
 
-# FAQ:
+A new Flutter project.
 
-### Why didn't you use flutter action from github marketplace ?
-Desktop builds are only available for master channel(basically github master branch) & flutter action use SDK release page to download flutter SDK & Only stable, beta & dev channel builds are available in SDK release page.
+## Getting Started
 
-### Why iOS build isn't implemented ?
-I don't have a iPhone & iOS simulators doesn't run real apps so there's no way I can test it but feel free to send a pull request (with little doc).
+This project is a starting point for a Flutter application.
 
-### Why there's debug label on Linux and Windows app ?
-Flutter doesn't support linux & windows out of the box & at this moment (Feb 2020) only debug builds are supported.
+A few resources to get you started if this is your first Flutter project:
 
-### Why my builds are failing but working fine on my local machine ?
-Make sure your local machine and githhub actions are using same commit on flutter master branch.
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-### How can I use same commit on flutter master branch ?
-Run `flutter doctor` on your local machine and copy the code after revision ```Framework • revision 67826bdce5 (4 days ago) • 2020-02-10 14:59:32 -0800```. In your **main.yml** add this code in same line as git clone command ```cd flutter && git checkout 67826bdce5```. PS: Make sure you replace code .
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
